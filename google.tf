@@ -1,7 +1,7 @@
 
 // This configures the Google Cloud provider
 provider "google" {
-  credentials = "${file("account.json")}"
+  credentials = "${file("../account.json")}"
   project     = "sinuous-country-156711"
   region      = "asia-northeast1"
 }
