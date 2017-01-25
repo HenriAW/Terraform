@@ -1,0 +1,1836 @@
+2017/01/25 15:27:55 [INFO] Terraform version: 0.8.4  a791ff09b29d063dd4b6da0cac04ad3b83c836f5
+2017/01/25 15:27:55 [INFO] CLI args: []string{"/usr/local/terraform/terraform", "apply"}
+2017/01/25 15:27:55 [DEBUG] Detected home directory from env var: /Users/henriwilliams
+2017/01/25 15:27:55 [DEBUG] Detected home directory from env var: /Users/henriwilliams
+2017/01/25 15:27:55 [DEBUG] Attempting to open CLI config file: /Users/henriwilliams/.terraformrc
+2017/01/25 15:27:55 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2017/01/25 15:27:55 [DEBUG] Detected home directory from env var: /Users/henriwilliams
+2017/01/25 15:27:55 [TRACE] Preserving existing state lineage "1a57bbcd-b14c-4740-a346-f1c7cd1e43a3"
+2017/01/25 15:27:55 [TRACE] Preserving existing state lineage "1a57bbcd-b14c-4740-a346-f1c7cd1e43a3"
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ConfigTransformerOld:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.OrphanTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.AddOutputOrphanTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.DisableProviderTransformerOld:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.VertexTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.FlattenTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProxyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.DestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CreateBeforeDestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneDestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [DEBUG] Checking resource noop: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] No diff, not a noop
+2017/01/25 15:27:55 [DEBUG] Checking resource noop: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] No diff, not a noop
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneNoopTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+2017/01/25 15:27:55 [DEBUG] Starting graph walk: walkInput
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:55 [TRACE] [walkInput] Entering eval tree: provider.google
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:55 [DEBUG] plugin: starting plugin: /usr/local/terraform/terraform []string{"/usr/local/terraform/terraform", "internal-plugin", "provider", "google"}
+2017/01/25 15:27:55 [DEBUG] plugin: waiting for RPC address for: /usr/local/terraform/terraform
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: 2017/01/25 15:27:55 [INFO] Terraform version: 0.8.4  a791ff09b29d063dd4b6da0cac04ad3b83c836f5
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: 2017/01/25 15:27:55 [INFO] CLI args: []string{"/usr/local/terraform/terraform", "internal-plugin", "provider", "google"}
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: 2017/01/25 15:27:55 [DEBUG] Detected home directory from env var: /Users/henriwilliams
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: 2017/01/25 15:27:55 [DEBUG] Detected home directory from env var: /Users/henriwilliams
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: 2017/01/25 15:27:55 [DEBUG] Attempting to open CLI config file: /Users/henriwilliams/.terraformrc
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: 2017/01/25 15:27:55 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: 2017/01/25 15:27:55 [DEBUG] Detected home directory from env var: /Users/henriwilliams
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Starting provider plugin google
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [DEBUG] plugin: plugin address: unix /var/folders/0v/_kh1sx1s6_n70crsyvv8bql80000gn/T/plugin599114152
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInputProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkInput] Exiting eval tree: provider.google
+2017/01/25 15:27:55 [DEBUG] vertex "google_compute_disk.default", got dep: "provider.google"
+2017/01/25 15:27:55 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkInput] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkInput] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:55 [TRACE] [walkInput] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] [walkInput] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkInput] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkInput] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_disk.default"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkInput] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkInput] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_instance.default"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google (close)': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google (close)': evaluating
+2017/01/25 15:27:55 [TRACE] [walkInput] Entering eval tree: provider.google (close)
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2017/01/25 15:27:55 [TRACE] [walkInput] Exiting eval tree: provider.google (close)
+2017/01/25 15:27:55 [INFO] Validating the context...
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ConfigTransformerOld:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.OrphanTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.AddOutputOrphanTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.DisableProviderTransformerOld:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.VertexTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.FlattenTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProxyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.DestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CreateBeforeDestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneDestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [DEBUG] Checking resource noop: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] No diff, not a noop
+2017/01/25 15:27:55 [DEBUG] Checking resource noop: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] No diff, not a noop
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneNoopTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+2017/01/25 15:27:55 [DEBUG] Starting graph walk: walkValidate
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: provider.google
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: provider.google
+2017/01/25 15:27:55 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:55 [DEBUG] vertex "google_compute_disk.default", got dep: "provider.google"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateCount
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateCount
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_disk.default"
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_instance.default"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google (close)': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google (close)': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: provider.google (close)
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: provider.google (close)
+2017/01/25 15:27:55 [INFO] Starting shadow graph walk: walkValidate
+2017/01/25 15:27:55 [DEBUG] Waiting for shadow graph to complete...
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: provider.google
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: provider.google
+2017/01/25 15:27:55 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:55 [DEBUG] vertex "google_compute_disk.default", got dep: "provider.google"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateCount
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateCount
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_disk.default"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_instance.default"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google (close)': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google (close)': evaluating
+2017/01/25 15:27:55 [TRACE] [walkValidate] Entering eval tree: provider.google (close)
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2017/01/25 15:27:55 [TRACE] [walkValidate] Exiting eval tree: provider.google (close)
+2017/01/25 15:27:55 [INFO] Shadow graph success!
+2017/01/25 15:27:55 [INFO] Validation result: 0 warnings, 0 errors
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ConfigTransformerOld:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.OrphanTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.AddOutputOrphanTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.DisableProviderTransformerOld:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.VertexTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.FlattenTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ProxyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.DestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CreateBeforeDestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_disk.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default (destroy) - *terraform.graphNodeResourceDestroy
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneDestroyTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [DEBUG] Checking resource noop: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] No diff, not a noop
+2017/01/25 15:27:55 [DEBUG] Checking resource noop: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] No diff, not a noop
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.PruneNoopTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+google_compute_instance.default - *terraform.GraphNodeConfigResource
+  provider.google - *terraform.GraphNodeConfigProvider
+provider.google - *terraform.GraphNodeConfigProvider
+provider.google (close) - *terraform.graphNodeCloseProvider
+  google_compute_disk.default - *terraform.GraphNodeConfigResource
+  google_compute_instance.default - *terraform.GraphNodeConfigResource
+2017/01/25 15:27:55 [DEBUG] Starting graph walk: walkRefresh
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Entering eval tree: provider.google
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Requesting Google token...
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO]   -- Email: 748728154997-compute@developer.gserviceaccount.com
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control]
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO]   -- Private Key Length: 1704
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Instantiating GCE client...
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Instantiating GKE client...
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Instantiating Google Cloud DNS client...
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Instantiating Google Storage Client...
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Instantiating Google SqlAdmin Client...
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Instatiating Google Pubsub Client...
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Instatiating Google Cloud ResourceManager Client...
+2017/01/25 15:27:55 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:55 [INFO] Instatiating Google Cloud IAM Client...
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Exiting eval tree: provider.google
+2017/01/25 15:27:55 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:55 [DEBUG] vertex "google_compute_disk.default", got dep: "provider.google"
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalRefresh
+2017/01/25 15:27:55 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalRefresh
+2017/01/25 15:27:55 [DEBUG] refresh: google_compute_instance.default: no state, not refreshing
+2017/01/25 15:27:55 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:55 [TRACE] [walkRefresh] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_disk.default"
+2017/01/25 15:27:56 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_instance.default"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google (close)': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google (close)': evaluating
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Entering eval tree: provider.google (close)
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Exiting eval tree: provider.google (close)
+2017/01/25 15:27:56 [INFO] Starting shadow graph walk: walkRefresh
+2017/01/25 15:27:56 [DEBUG] Waiting for shadow graph to complete...
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Entering eval tree: provider.google
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Exiting eval tree: provider.google
+2017/01/25 15:27:56 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:56 [DEBUG] vertex "google_compute_disk.default", got dep: "provider.google"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_instance.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ResourceCountTransformerOld:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.graphNodeExpandedResource
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalRefresh
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_disk.default"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalRefresh
+2017/01/25 15:27:56 [DEBUG] refresh: google_compute_instance.default: no state, not refreshing
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] vertex "provider.google (close)", got dep: "google_compute_instance.default"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google (close)': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google (close)': evaluating
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Entering eval tree: provider.google (close)
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2017/01/25 15:27:56 [TRACE] [walkRefresh] Exiting eval tree: provider.google (close)
+2017/01/25 15:27:56 [INFO] Shadow graph success!
+2017/01/25 15:27:56 [TRACE] ConfigTransformer: Starting for path: []
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+google_compute_instance.default - *terraform.NodePlannableResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.OutputTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+google_compute_instance.default - *terraform.NodePlannableResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+google_compute_instance.default - *terraform.NodePlannableResource
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Beginning...
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Attach resource config request: google_compute_disk.default
+2017/01/25 15:27:56 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"google_compute_disk", RawCount:(*config.RawConfig)(0xc4203d0840), RawConfig:(*config.RawConfig)(0xc4203d0420), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Attach resource config request: google_compute_instance.default
+2017/01/25 15:27:56 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"google_compute_instance", RawCount:(*config.RawConfig)(0xc4203d1440), RawConfig:(*config.RawConfig)(0xc4203d09c0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+google_compute_instance.default - *terraform.NodePlannableResource
+2017/01/25 15:27:56 [DEBUG] Attaching resource state to "google_compute_disk.default": Type = google_compute_disk
+2017/01/25 15:27:56 [DEBUG] Resource state not found for "google_compute_instance.default": google_compute_instance.default
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+google_compute_instance.default - *terraform.NodePlannableResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+google_compute_instance.default - *terraform.NodePlannableResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+google_compute_instance.default - *terraform.NodePlannableResource
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Attach provider request: []string{} google
+2017/01/25 15:27:56 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"google", Alias:"", RawConfig:(*config.RawConfig)(0xc4203d0060)}
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachProviderConfigTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_disk.default" references: []
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_instance.default" references: []
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "provider.google" references: []
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  google_compute_disk.default - *terraform.NodePlannableResource
+  google_compute_instance.default - *terraform.NodePlannableResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodePlannableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  google_compute_disk.default - *terraform.NodePlannableResource
+  google_compute_instance.default - *terraform.NodePlannableResource
+2017/01/25 15:27:56 [DEBUG] Starting graph walk: walkPlan
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: provider.google
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Requesting Google token...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO]   -- Email: 748728154997-compute@developer.gserviceaccount.com
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control]
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO]   -- Private Key Length: 1704
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating GCE client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating GKE client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating Google Cloud DNS client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating Google Storage Client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating Google SqlAdmin Client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instatiating Google Pubsub Client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instatiating Google Cloud ResourceManager Client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instatiating Google Cloud IAM Client...
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: provider.google
+2017/01/25 15:27:56 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:56 [DEBUG] vertex "google_compute_disk.default", got dep: "provider.google"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] OrphanResourceCount: Starting...
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:56 [DEBUG] Resource state not found for "google_compute_instance.default": google_compute_instance.default
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_instance.default" references: []
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] OrphanResourceCount: Starting...
+2017/01/25 15:27:56 [TRACE] OrphanResourceCount: Checking: google_compute_disk.default
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] Attaching resource state to "google_compute_disk.default": Type = google_compute_disk
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_disk.default" references: []
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCheckPreventDestroy
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] vertex "root", got dep: "google_compute_disk.default"
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCheckPreventDestroy
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] vertex "root", got dep: "google_compute_instance.default"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.root': walking
+2017/01/25 15:27:56 [INFO] Starting shadow graph walk: walkPlan
+2017/01/25 15:27:56 [DEBUG] Waiting for shadow graph to complete...
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: provider.google
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: provider.google
+2017/01/25 15:27:56 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:56 [DEBUG] vertex "google_compute_disk.default", got dep: "provider.google"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountCheckComputed
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] OrphanResourceCount: Starting...
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] Resource state not found for "google_compute_instance.default": google_compute_instance.default
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_instance.default" references: []
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_instance.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': expanding/walking dynamic subgraph
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] OrphanResourceCount: Starting...
+2017/01/25 15:27:56 [TRACE] OrphanResourceCount: Checking: google_compute_disk.default
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] Attaching resource state to "google_compute_disk.default": Type = google_compute_disk
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_disk.default" references: []
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.NodePlannableResourceInstance
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkPlan] Entering eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCheckPreventDestroy
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: google_compute_disk.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:56 [DEBUG] vertex "root", got dep: "google_compute_disk.default"
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCheckPreventDestroy
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2017/01/25 15:27:56 [TRACE] [walkPlan] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] vertex "root", got dep: "google_compute_instance.default"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.root': walking
+2017/01/25 15:27:56 [INFO] Shadow graph success!
+2017/01/25 15:27:56 [TRACE] DiffTransformer: starting
+2017/01/25 15:27:56 [TRACE] DiffTransformer: Module: DESTROY/CREATE: google_compute_disk.default
+  name:      "test-disk" => "test-disk"
+  project:   "" => "sinuous-country-156711" (forces new resource)
+  self_link: "https://www.googleapis.com/compute/v1/projects/sinuous-country-156711/zones/asia-northeast1-c/disks/test-disk" => "<computed>"
+  type:      "pd-ssd" => "pd-ssd"
+  zone:      "asia-northeast1-c" => "asia-northeast1-c"
+CREATE: google_compute_instance.default
+  can_ip_forward:                                      "" => "false" (forces new resource)
+  create_timeout:                                      "" => "4"
+  description:                                         "" => "A GCE VM setup with terraform" (forces new resource)
+  disk.#:                                              "" => "1" (forces new resource)
+  disk.0.auto_delete:                                  "" => "true" (forces new resource)
+  disk.0.disk:                                         "" => "test-disk" (forces new resource)
+  disk.0.image:                                        "" => "ubuntu-os-cloud/ubuntu-1604-lts" (forces new resource)
+  machine_type:                                        "" => "custom-4-16384" (forces new resource)
+  metadata_fingerprint:                                "" => "<computed>"
+  metadata_startup_script:                             "" => "#! /bin/bash\n\nsudo apt-get update\nsudo apt-get install -y docker.io\n" (forces new resource)
+  name:                                                "" => "terraform-instance" (forces new resource)
+  network_interface.#:                                 "" => "1" (forces new resource)
+  network_interface.0.access_config.#:                 "" => "1"
+  network_interface.0.access_config.0.assigned_nat_ip: "" => "<computed>"
+  network_interface.0.address:                         "" => "<computed>" (forces new resource)
+  network_interface.0.name:                            "" => "<computed>"
+  network_interface.0.network:                         "" => "default" (forces new resource)
+  self_link:                                           "" => "<computed>"
+  tags.#:                                              "" => "1"
+  tags.409877795:                                      "" => "browser-apps"
+  tags_fingerprint:                                    "" => "<computed>"
+  zone:                                                "" => "asia-northeast1-c" (forces new resource)
+2017/01/25 15:27:56 [TRACE] DiffTransformer: Resource "google_compute_disk.default": *terraform.InstanceDiff{mu:sync.Mutex{state:0, sema:0x0}, Attributes:map[string]*terraform.ResourceAttrDiff{"zone":*terraform.ResourceAttrDiff{Old:"asia-northeast1-c", New:"asia-northeast1-c", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "project":*terraform.ResourceAttrDiff{Old:"", New:"sinuous-country-156711", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "self_link":*terraform.ResourceAttrDiff{Old:"https://www.googleapis.com/compute/v1/projects/sinuous-country-156711/zones/asia-northeast1-c/disks/test-disk", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "id":*terraform.ResourceAttrDiff{Old:"test-disk", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x2}, "type":*terraform.ResourceAttrDiff{Old:"pd-ssd", New:"pd-ssd", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "name":*terraform.ResourceAttrDiff{Old:"test-disk", New:"test-disk", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}}, Destroy:true, DestroyDeposed:false, DestroyTainted:false}
+2017/01/25 15:27:56 [TRACE] DiffTransformer: Resource "google_compute_instance.default": *terraform.InstanceDiff{mu:sync.Mutex{state:0, sema:0x0}, Attributes:map[string]*terraform.ResourceAttrDiff{"can_ip_forward":*terraform.ResourceAttrDiff{Old:"", New:"false", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "name":*terraform.ResourceAttrDiff{Old:"", New:"terraform-instance", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "self_link":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "id":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x2}, "network_interface.0.access_config.0.assigned_nat_ip":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "tags.#":*terraform.ResourceAttrDiff{Old:"", New:"1", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "metadata_fingerprint":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "network_interface.0.network":*terraform.ResourceAttrDiff{Old:"", New:"default", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "disk.0.image":*terraform.ResourceAttrDiff{Old:"", New:"ubuntu-os-cloud/ubuntu-1604-lts", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "network_interface.0.access_config.#":*terraform.ResourceAttrDiff{Old:"", New:"1", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "disk.0.disk":*terraform.ResourceAttrDiff{Old:"", New:"test-disk", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "disk.#":*terraform.ResourceAttrDiff{Old:"", New:"1", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "zone":*terraform.ResourceAttrDiff{Old:"", New:"asia-northeast1-c", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "create_timeout":*terraform.ResourceAttrDiff{Old:"", New:"4", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "tags_fingerprint":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "network_interface.0.name":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "disk.0.auto_delete":*terraform.ResourceAttrDiff{Old:"", New:"true", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "metadata_startup_script":*terraform.ResourceAttrDiff{Old:"", New:"#! /bin/bash\n\nsudo apt-get update\nsudo apt-get install -y docker.io\n", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "tags.409877795":*terraform.ResourceAttrDiff{Old:"", New:"browser-apps", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "description":*terraform.ResourceAttrDiff{Old:"", New:"A GCE VM setup with terraform", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "network_interface.#":*terraform.ResourceAttrDiff{Old:"", New:"1", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "machine_type":*terraform.ResourceAttrDiff{Old:"", New:"custom-4-16384", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "network_interface.0.address":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}}, Destroy:false, DestroyDeposed:false, DestroyTainted:false}
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.DiffTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+google_compute_instance.default - *terraform.NodeApplyableResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+google_compute_instance.default - *terraform.NodeApplyableResource
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Beginning...
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Attach resource config request: google_compute_disk.default
+2017/01/25 15:27:56 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"google_compute_disk", RawCount:(*config.RawConfig)(0xc4203d0840), RawConfig:(*config.RawConfig)(0xc4203d0420), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Attach resource config request: google_compute_disk.default
+2017/01/25 15:27:56 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"google_compute_disk", RawCount:(*config.RawConfig)(0xc4203d0840), RawConfig:(*config.RawConfig)(0xc4203d0420), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Attach resource config request: google_compute_instance.default
+2017/01/25 15:27:56 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"google_compute_instance", RawCount:(*config.RawConfig)(0xc4203d1440), RawConfig:(*config.RawConfig)(0xc4203d09c0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+google_compute_instance.default - *terraform.NodeApplyableResource
+2017/01/25 15:27:56 [DEBUG] Attaching resource state to "google_compute_disk.default (destroy)": Type = google_compute_disk
+2017/01/25 15:27:56 [DEBUG] Attaching resource state to "google_compute_disk.default": Type = google_compute_disk
+2017/01/25 15:27:56 [DEBUG] Resource state not found for "google_compute_instance.default": google_compute_instance.default
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+google_compute_instance.default - *terraform.NodeApplyableResource
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+google_compute_instance.default - *terraform.NodeApplyableResource
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Attach provider request: []string{} google
+2017/01/25 15:27:56 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"google", Alias:"", RawConfig:(*config.RawConfig)(0xc4203d0060)}
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.AttachProviderConfigTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] DestroyEdgeTransformer: Beginning destroy edge transformation...
+2017/01/25 15:27:56 [TRACE] DestroyEdgeTransformer: google_compute_disk.default (destroy) destroying "google_compute_disk.default"
+2017/01/25 15:27:56 [TRACE] DestroyEdgeTransformer: connecting creator/destroyer: google_compute_disk.default, google_compute_disk.default (destroy)
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Beginning...
+2017/01/25 15:27:56 [TRACE] AttachResourceConfigTransformer: Attach resource config request: google_compute_disk.default
+2017/01/25 15:27:56 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"google_compute_disk", RawCount:(*config.RawConfig)(0xc4203d0840), RawConfig:(*config.RawConfig)(0xc4203d0420), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2017/01/25 15:27:56 [DEBUG] Attaching resource state to "google_compute_disk.default": Type = google_compute_disk
+2017/01/25 15:27:56 [TRACE] Attach provider request: []string{} google
+2017/01/25 15:27:56 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"google", Alias:"", RawConfig:(*config.RawConfig)(0xc4203d0060)}
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_disk.default" references: []
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "provider.google" references: []
+2017/01/25 15:27:56 [TRACE] DestroyEdgeTransformer: reference graph: google_compute_disk.default
+  provider.google
+provider.google
+2017/01/25 15:27:56 [TRACE] DestroyEdgeTransformer: creation node "google_compute_disk.default" references [provider.google]
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.DestroyEdgeTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] CBDEdgeTransformer: Beginning CBD transformation...
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.CBDEdgeTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.OutputTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_disk.default (destroy)" references: []
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_disk.default" references: []
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "google_compute_instance.default" references: []
+2017/01/25 15:27:56 [DEBUG] ReferenceTransformer: "provider.google" references: []
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.RootTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+google_compute_disk.default (destroy) - *terraform.NodeDestroyResource
+  provider.google - *terraform.NodeApplyableProvider
+google_compute_instance.default - *terraform.NodeApplyableResource
+  provider.google - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  google_compute_disk.default - *terraform.NodeApplyableResource
+  google_compute_instance.default - *terraform.NodeApplyableResource
+provider.google - *terraform.NodeApplyableProvider
+2017/01/25 15:27:56 [DEBUG] Starting graph walk: walkApply
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:56 [TRACE] [walkApply] Entering eval tree: provider.google
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Requesting Google token...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO]   -- Email: 748728154997-compute@developer.gserviceaccount.com
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control]
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO]   -- Private Key Length: 1704
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating GCE client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating GKE client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating Google Cloud DNS client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating Google Storage Client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instantiating Google SqlAdmin Client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instatiating Google Pubsub Client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instatiating Google Cloud ResourceManager Client...
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [INFO] Instatiating Google Cloud IAM Client...
+2017/01/25 15:27:56 [TRACE] [walkApply] Exiting eval tree: provider.google
+2017/01/25 15:27:56 [DEBUG] vertex "google_compute_disk.default (destroy)", got dep: "provider.google"
+2017/01/25 15:27:56 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default (destroy)': walking
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_disk.default (destroy)': evaluating
+2017/01/25 15:27:56 [TRACE] [walkApply] Entering eval tree: google_compute_disk.default (destroy)
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalFilterDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalRequireState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalApply
+2017/01/25 15:27:56 [DEBUG] apply: google_compute_disk.default: executing Apply
+2017/01/25 15:27:56 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:56 [TRACE] [walkApply] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:56 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalCompareDiff
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:56 [DEBUG] root: eval: *terraform.EvalApply
+2017/01/25 15:27:56 [DEBUG] apply: google_compute_instance.default: executing Apply
+2017/01/25 15:27:56 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:56 [DEBUG] Loading zone: asia-northeast1-c
+2017/01/25 15:27:57 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:57 [DEBUG] Loading machine type: custom-4-16384
+2017/01/25 15:27:57 [DEBUG] plugin: terraform: google-provider (internal) 2017/01/25 15:27:57 [DEBUG] Waiting for state to become: [DONE]
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: panic: runtime error: invalid memory address or nil pointer dereference
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: [signal SIGSEGV: segmentation violation code=0x1 addr=0x30 pc=0x8cf336]
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: goroutine 119 [running]:
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: panic(0x2f40f60, 0xc420010060)
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/go/src/runtime/panic.go:500 +0x1a1
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: github.com/hashicorp/terraform/builtin/providers/google.resourceComputeInstanceCreate(0xc420792060, 0x2eab860, 0xc420256380, 0xc420735bc0, 0x167b1)
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/gopath/src/github.com/hashicorp/terraform/builtin/providers/google/resource_compute_instance.go:416 +0x1386
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc4207343c0, 0xc4205ee960, 0xc4205eb2e0, 0x2eab860, 0xc420256380, 0x1, 0xc420484cf0, 0x18)
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/gopath/src/github.com/hashicorp/terraform/helper/schema/resource.go:162 +0x30e
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc420735920, 0xc4205ee910, 0xc4205ee960, 0xc4205eb2e0, 0x0, 0xc420735920, 0xc420494a50)
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/gopath/src/github.com/hashicorp/terraform/helper/schema/provider.go:212 +0x9b
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: github.com/hashicorp/terraform/plugin.(*ResourceProviderServer).Apply(0xc4202db820, 0xc4205eb220, 0xc4204ed4d0, 0x0, 0x0)
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/gopath/src/github.com/hashicorp/terraform/plugin/resource_provider.go:488 +0x57
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: reflect.Value.call(0xc42006eea0, 0xc42049af08, 0x13, 0x3621b62, 0x4, 0xc4207bbed0, 0x3, 0x3, 0x0, 0x0, ...)
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/go/src/reflect/value.go:434 +0x5c8
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: reflect.Value.Call(0xc42006eea0, 0xc42049af08, 0x13, 0xc4207bbed0, 0x3, 0x3, 0x0, 0x0, 0x0)
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/go/src/reflect/value.go:302 +0xa4
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: net/rpc.(*service).call(0xc420631700, 0xc4206316c0, 0xc4201c7170, 0xc420622280, 0xc4205f5120, 0x2b33e40, 0xc4205eb220, 0x16, 0x2b33e80, 0xc4204ed4d0, ...)
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/go/src/net/rpc/server.go:383 +0x148
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: created by net/rpc.(*Server).ServeCodec
+2017/01/25 15:27:58 [DEBUG] plugin: terraform: 	/opt/go/src/net/rpc/server.go:477 +0x421
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalApplyProvisioners
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalApplyPost
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalApplyPost
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalApplyPost, err: 1 error(s) occurred:
+
+* google_compute_disk.default: unexpected EOF
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* google_compute_disk.default: unexpected EOF
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalOpFilter, err: 1 error(s) occurred:
+
+* google_compute_disk.default: unexpected EOF
+2017/01/25 15:27:58 [TRACE] [walkApply] Exiting eval tree: google_compute_disk.default (destroy)
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalApplyPost, err: 1 error(s) occurred:
+
+* google_compute_instance.default: unexpected EOF
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* google_compute_instance.default: unexpected EOF
+2017/01/25 15:27:58 [TRACE] [walkApply] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:58 [DEBUG] vertex "google_compute_disk.default", got dep: "google_compute_disk.default (destroy)"
+2017/01/25 15:27:58 [DEBUG] vertex "meta.count-boundary (count boundary fixup)", got dep: "google_compute_disk.default"
+2017/01/25 15:27:58 [DEBUG] vertex "meta.count-boundary (count boundary fixup)", got dep: "google_compute_instance.default"
+2017/01/25 15:27:58 [INFO] Starting shadow graph walk: walkApply
+2017/01/25 15:27:58 [DEBUG] Waiting for shadow graph to complete...
+2017/01/25 15:27:58 [DEBUG] plugin: /usr/local/terraform/terraform: plugin process exited
+2017/01/25 15:27:58 [DEBUG] vertex 'root.provider.google': walking
+2017/01/25 15:27:58 [DEBUG] vertex 'root.provider.google': evaluating
+2017/01/25 15:27:58 [TRACE] [walkApply] Entering eval tree: provider.google
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalInitProvider
+2017/01/25 15:27:58 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:58 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2017/01/25 15:27:58 [TRACE] [walkApply] Exiting eval tree: provider.google
+2017/01/25 15:27:58 [DEBUG] vertex "google_compute_disk.default (destroy)", got dep: "provider.google"
+2017/01/25 15:27:58 [DEBUG] vertex 'root.google_compute_disk.default (destroy)': walking
+2017/01/25 15:27:58 [DEBUG] vertex "google_compute_instance.default", got dep: "provider.google"
+2017/01/25 15:27:58 [DEBUG] vertex 'root.google_compute_disk.default (destroy)': evaluating
+2017/01/25 15:27:58 [DEBUG] vertex 'root.google_compute_instance.default': walking
+2017/01/25 15:27:58 [TRACE] [walkApply] Entering eval tree: google_compute_disk.default (destroy)
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalOpFilter
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalReadDiff
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalFilterDiff
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:58 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalRequireState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalApply
+2017/01/25 15:27:58 [DEBUG] apply: google_compute_disk.default: executing Apply
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalApplyPost
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalApplyPost, err: 1 error(s) occurred:
+
+* google_compute_disk.default: unexpected EOF
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* google_compute_disk.default: unexpected EOF
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalOpFilter, err: 1 error(s) occurred:
+
+* google_compute_disk.default: unexpected EOF
+2017/01/25 15:27:58 [TRACE] [walkApply] Exiting eval tree: google_compute_disk.default (destroy)
+2017/01/25 15:27:58 [DEBUG] vertex "google_compute_disk.default", got dep: "google_compute_disk.default (destroy)"
+2017/01/25 15:27:58 [DEBUG] vertex "meta.count-boundary (count boundary fixup)", got dep: "google_compute_disk.default"
+2017/01/25 15:27:58 [DEBUG] vertex 'root.google_compute_instance.default': evaluating
+2017/01/25 15:27:58 [TRACE] [walkApply] Entering eval tree: google_compute_instance.default
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalSequence
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalReadDiff
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:58 [DEBUG] root: eval: terraform.EvalNoop
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalInterpolate
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalValidateResource
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalDiff
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalReadDiff
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalCompareDiff
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalGetProvider
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalReadState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalApply
+2017/01/25 15:27:58 [DEBUG] apply: google_compute_instance.default: executing Apply
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalApplyProvisioners
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalIf
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalWriteState
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalWriteDiff
+2017/01/25 15:27:58 [DEBUG] root: eval: *terraform.EvalApplyPost
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalApplyPost, err: 1 error(s) occurred:
+
+* google_compute_instance.default: unexpected EOF
+2017/01/25 15:27:58 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* google_compute_instance.default: unexpected EOF
+2017/01/25 15:27:58 [TRACE] [walkApply] Exiting eval tree: google_compute_instance.default
+2017/01/25 15:27:58 [DEBUG] vertex "meta.count-boundary (count boundary fixup)", got dep: "google_compute_instance.default"
+2017/01/25 15:27:58 [ERROR] Shadow graph error: 2 error(s) occurred:
+
+* google_compute_disk.default: unexpected EOF
+* google_compute_instance.default: unexpected EOF
+2017/01/25 15:27:58 [TRACE] Preserving existing state lineage "1a57bbcd-b14c-4740-a346-f1c7cd1e43a3"
+2017/01/25 15:27:58 [TRACE] Preserving existing state lineage "1a57bbcd-b14c-4740-a346-f1c7cd1e43a3"
+2017/01/25 15:27:58 [DEBUG] plugin: waiting for all plugin processes to complete...
